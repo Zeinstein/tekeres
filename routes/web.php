@@ -11,4 +11,7 @@
 |
 */
 
-Route::get('/', 'IndexController@show')->name('index');
+Route::get('/', 'PageController@showIndex')->name('index');
+Route::get('/kapcsolat', 'PageController@showContact')->name('contact');
+Route::post('/kapcsolat', 'FormController@contactForm')->name('contactForm');
+Route::get('/taborok', 'PageController@showCamps')->name('taborok');
